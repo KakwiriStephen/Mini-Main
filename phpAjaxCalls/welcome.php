@@ -3,7 +3,7 @@
 
 <head>
     <title>Search User</title>
-    <link rel="stylesheet" href="http://bootswatch.com/cerulean/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/5/cerulean/bootstrap.min.css">
 </head>
 
 <body>
