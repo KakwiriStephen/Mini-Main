@@ -35,6 +35,8 @@ $suggestion = "";
 if($q !== ""){
 	$q = strtolower($q);
 	$len = strlen($q);
+
+    //loping people
 	foreach($people as $person){
 		if(stristr($q, substr($person, 0, $len))){
 			if($suggestion === ""){
@@ -47,3 +49,5 @@ if($q !== ""){
 }
 
 echo $suggestion === "" ? "No Suggestion" : $suggestion;
+
+?>
