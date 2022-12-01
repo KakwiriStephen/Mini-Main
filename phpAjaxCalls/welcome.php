@@ -19,6 +19,8 @@
                     document.getElementById('output').innerHTML = this.responseText;
                 }
             }
+            xmlhttp.open('GEt', "suggest.php?q=" + str, true)
+            xmlhttp.send();
         }
 
     }
