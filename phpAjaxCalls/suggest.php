@@ -49,5 +49,4 @@ if($q !== ""){
 }
 
 echo $suggestion === "" ? "No Suggestion" : $suggestion;
-
 ?>
