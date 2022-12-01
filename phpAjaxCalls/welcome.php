@@ -8,6 +8,9 @@
 
 <script>
     function showSuggestion(str) {
+        if (str.length == 0) {
+            document.getElementById('output').innerHTML = '';
+        }
 
     }
 </script>
