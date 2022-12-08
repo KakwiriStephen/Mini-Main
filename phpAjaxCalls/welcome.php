@@ -11,6 +11,7 @@
         if (str.length == 0) {
             document.getElementById('output').innerHTML = '';
         } else {
+            
             //create httpxml request
 
             var xmlhttp = new XMLHttpRequest();
@@ -22,7 +23,6 @@
             xmlhttp.open('GEt', "suggest.php?q=" + str, true)
             xmlhttp.send();
         }
-
     }
 </script>
 
