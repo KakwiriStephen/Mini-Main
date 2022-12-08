@@ -26,7 +26,6 @@ $people[] = "Mary";
 $people[] = "Brad";
 $people[] = "Mike";
 $people[] = "Anna";
-$people[]="Cinderella";
 $people[]="Diana";
 $people[]="Eva";
 $people[]="Fiona";
