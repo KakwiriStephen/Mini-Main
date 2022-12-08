@@ -7,6 +7,7 @@ const { default: mongoose } = require("mongoose");
 
 dotenv.config({ path: "./config.env" });
 
+mongoose.set("strictQuery", true);
 const DB = process.env.DATABASE.replace(
     "<PASSWORD>",
     process.env.DATABASE_PASSWORD
