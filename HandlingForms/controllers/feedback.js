@@ -51,24 +51,22 @@ exports.createFeedback = (req, res) => {
     }
 };
 
-/*const flights = require("./../models/Flight");
+//Update Feedback PATCH
+exports.updateFeedback = (req, res) => {
+    try {} catch (err) {
+        res.status(404).json({
+            status: "fail",
+            message: err,
+        });
+    }
+};
 
-
-
-// get one flight--get
-e
-
-
-
-//update flight--patch
-
-
-//delete flight
-exports.deleteFlight = (req, res) => {
+//delete Feedback
+exports.deleteFeedback = (req, res) => {
     try {
-        const flightId = req.params.id;
-        flights = flights.filter((flight) => {
-            return flight.id !== flightId;
+        const feedback = req.params.id;
+        feedback = Feedback.filter((feedback) => {
+            return feedback.id !== feedbackId;
         });
 
         res.status(204).json({
@@ -81,4 +79,4 @@ exports.deleteFlight = (req, res) => {
             message: err,
         });
     }
-}; */
+};
