@@ -1,20 +1,11 @@
-const moongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 const feedbackSchema = new mongoose.Schema({
-    comment: {
-        type: String,
-        required: true,
-    },
-
-    rating: {
-        type: Number,
-        required: true,
-    },
-
-    timestamp: {
-        type: Date,
-        default: Date.now,
-    },
+  feedback: {
+    type: String,
+    required: [true, "Please Enter Your Feedback"],
+  },
 });
 
-module.exports = moongoose.model("Feedback", feedbackSchema);
+const Feed = mongoose.model("Feed", feedbackSchema);
+module.exports = Feed;
