@@ -1,17 +1,20 @@
 const Feed = require("../models/feedbackModel");
 
-//Getting all feedback GET ALL
-exports.getFeeds = (req, res, next) => {
+//Getting all feedbacks
+//find method
+exports.getFeeds = async (req, res) => {
   try {
+    const feedbacks = Feed.find();
+    console.log(feedbacks);
+
     res.status(200).json({
       status: "success",
-      message: "API ",
-      results: Feedback.length,
+      results: feedbacks.length,
       data: {
-        Feedback,
+        feedbacks,
       },
     });
-  } catch (error) {
+  } catch (err) {
     res.status(404).json({
       status: "fail",
       message: err,
