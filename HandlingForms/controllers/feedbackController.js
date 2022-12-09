@@ -56,7 +56,6 @@ exports.createFeedback = async (req, res) => {
       status: "fail",
       message: err,
     });
-    console.log(err);
   }
 };
 
