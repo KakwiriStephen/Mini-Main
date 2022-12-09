@@ -42,6 +42,7 @@ exports.getFeedback = (req, res) => {
 };
 
 //create a Feedback- POST
+//Create returns a promise that has to be await
 exports.createFeedback = async (req, res) => {
   const newFeedback = await Feed.create(req.body);
   try {
