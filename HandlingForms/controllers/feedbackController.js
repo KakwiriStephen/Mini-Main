@@ -23,12 +23,14 @@ exports.getFeeds = async (req, res) => {
 
 // Find one feedback
 // GET route
-exports.getFeedback = (req, res) => {
+exports.getFeedback = async (req, res) => {
   try {
-    const feedbackId = req.params.id;
-    const feedback = Feed.find((feedback) => {
-      return feedback.id === Number(feedbackId);
-    });
+    // const feedbackId = req.params.id;
+    // const feedback = await Feed.findById((feedback) => {
+    //   return feedback.id === Number(feedbackId);
+    // });
+    const feedback = await Feed.findById(req.params.id);
+
     res.status(200).json({
       status: "success",
 
