@@ -66,8 +66,17 @@ exports.createFeedback = async (req, res) => {
 };
 
 //Update Feedback PATCH
-exports.updateFeedback = (req, res) => {
+exports.updateFeedback = async (req, res) => {
   try {
+    const feedback = await Feed.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.status(200).json({
+      status: "success",
+      data: {
+        feedback,
+      },
+    });
   } catch (err) {
     res.status(404).json({
       status: "fail",
@@ -80,7 +89,7 @@ exports.updateFeedback = (req, res) => {
 exports.deleteFeedback = (req, res) => {
   try {
     const feedback = req.params.id;
-    feedback = Feedback.filter((feedback) => {
+    feedback = Feed.filter((feedback) => {
       return feedback.id !== feedbackId;
     });
 
