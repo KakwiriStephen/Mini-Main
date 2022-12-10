@@ -1,7 +1,8 @@
 const Feed = require("../models/feedbackModel");
 
-//Getting all feedbacks
-//find method
+//CRUD OPERATIONS
+
+//Getting all feedbacks-GET
 exports.getFeeds = async (req, res) => {
   Feed.find({}, function (err, feedbacks) {
     if (err) {
@@ -21,14 +22,9 @@ exports.getFeeds = async (req, res) => {
   });
 };
 
-// Find one feedback
-// GET route
+// Find one feedback-GET
 exports.getFeedback = async (req, res) => {
   try {
-    // const feedbackId = req.params.id;
-    // const feedback = await Feed.findById((feedback) => {
-    //   return feedback.id === Number(feedbackId);
-    // });
     const feedback = await Feed.findById(req.params.id);
 
     res.status(200).json({
@@ -47,7 +43,6 @@ exports.getFeedback = async (req, res) => {
 };
 
 //create a Feedback- POST
-//Create returns a promise that has to be await
 exports.createFeedback = async (req, res) => {
   const newFeedback = await Feed.create(req.body);
   try {
@@ -65,7 +60,7 @@ exports.createFeedback = async (req, res) => {
   }
 };
 
-//Update Feedback PATCH
+//Update Feedback-PATCH
 exports.updateFeedback = async (req, res) => {
   try {
     const feedback = await Feed.findByIdAndUpdate(req.params.id, req.body, {
@@ -85,7 +80,7 @@ exports.updateFeedback = async (req, res) => {
   }
 };
 
-//delete Feedback
+//delete Feedback-DELETE
 exports.deleteFeedback = async (req, res) => {
   try {
     await Feed.findByIdAndDelete(req.params.id);
