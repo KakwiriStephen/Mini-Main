@@ -6,5 +6,6 @@ const router = express.Router();
 router.post("/generatefeedback", feedbackController.createFeedback);
 router.get("/feedbacks", feedbackController.getFeeds);
 router.get("/getone/:id", feedbackController.getFeedback);
+router.patch("/update/:id", feedbackController.updateFeedback);
 
 module.exports = router;
