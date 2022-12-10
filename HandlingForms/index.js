@@ -1,5 +1,5 @@
 const http = require("http");
-const mogoose = require("mongoose");
+const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
 const app = require("./app");
