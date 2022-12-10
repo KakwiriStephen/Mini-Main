@@ -86,12 +86,9 @@ exports.updateFeedback = async (req, res) => {
 };
 
 //delete Feedback
-exports.deleteFeedback = (req, res) => {
+exports.deleteFeedback = async (req, res) => {
   try {
-    const feedback = req.params.id;
-    feedback = Feed.filter((feedback) => {
-      return feedback.id !== feedbackId;
-    });
+    await Feed.findByIdAndDelete(req.params.id);
 
     res.status(204).json({
       status: "success",
