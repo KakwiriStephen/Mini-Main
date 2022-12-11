@@ -6,6 +6,15 @@ const feedbackSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please Enter Your Feedback"],
   },
+  tittle: {
+    type: String,
+    required: [true, "Feedback Must contain a tittle"],
+  },
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: [true, "Feedback must belong to a user"],
+  },
   photo: {
     type: String,
     default: "default.jpg",
