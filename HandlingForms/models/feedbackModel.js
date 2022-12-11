@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 
+//Main Form SChema
 const feedbackSchema = new mongoose.Schema({
   feedback: {
     type: String,
