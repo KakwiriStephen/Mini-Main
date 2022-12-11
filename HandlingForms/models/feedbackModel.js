@@ -6,6 +6,10 @@ const feedbackSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please Enter Your Feedback"],
   },
+  photo: {
+    type: String,
+    default: "default.jpg",
+  },
 });
 
 const Feed = mongoose.model("Feed", feedbackSchema);
