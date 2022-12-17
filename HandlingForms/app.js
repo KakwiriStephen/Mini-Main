@@ -4,6 +4,6 @@ const feedbackRouter = require("./routes/feedbackRoute");
 const app = express();
 
 app.use(express.json());
-app.use("/api/feedback", feedbackRouter);
+app.use("/feedback", feedbackRouter);
 
 module.exports = app;
