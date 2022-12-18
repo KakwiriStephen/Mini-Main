@@ -5,10 +5,12 @@ const slugify = require("slugify");
 function createCategories(categories, parentId = null) {
   const categoryList = [];
   let category;
-
+  //parent categories have no ParentId
   if (parentId === null) {
     category = categories.filter((cat) => cat.parentId == undefined);
-  } else {
+  }
+  //Children ategories have parentId
+  else {
     category = categories.filter((cat) => cat.parentId == parentId);
   }
 
