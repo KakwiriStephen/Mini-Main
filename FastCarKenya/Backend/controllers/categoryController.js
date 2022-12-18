@@ -3,7 +3,7 @@ const Category = require("../models/categryModel");
 const slugify = require("slugify");
 
 function createCategories(categories, parentId = null) {
-  const categoryList = [];
+  const categoryList = []; //Array
   let category;
   //parent categories have no ParentId
   if (parentId === null) {
