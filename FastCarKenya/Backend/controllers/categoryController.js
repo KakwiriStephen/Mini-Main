@@ -1,4 +1,4 @@
-const express = require("express");
+// const express = require("express");
 const Category = require("../models/categryModel");
 const slugify = require("slugify");
 
@@ -24,7 +24,6 @@ function createCategories(categories, parentId = null) {
   }
   return categoryList;
 }
-
 //Create Category
 exports.addCategory = (req, res) => {
   //Category Object
