@@ -47,6 +47,7 @@ exports.addCategory = (req, res) => {
 };
 
 //Get all categories
+//
 exports.getCategories = (req, res) => {
   Category.find({}).exec((error, categories) => {
     if (error) return res.status(400).json({ error });
