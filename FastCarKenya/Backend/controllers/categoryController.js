@@ -1,4 +1,4 @@
-// const express = require("express");
+const express = require("express");
 const Category = require("../models/categryModel");
 const slugify = require("slugify");
 
