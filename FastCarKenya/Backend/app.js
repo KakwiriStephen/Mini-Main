@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const categoryRouter = require("./routes/categoryRoutes");
 
 const app = express();
 
@@ -18,5 +19,7 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+app.use("/category", categoryRouter);
 
 module.exports = app;
