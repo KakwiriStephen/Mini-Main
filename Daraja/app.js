@@ -1,5 +1,4 @@
 const express = require("express");
-const path = require("path");
 const request = require("request");
 var unirest = require("unirest");
 // const categoryRouter = require("./routes/categoryRoutes");
