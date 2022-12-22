@@ -1,7 +1,5 @@
 const express = require("express");
-const request = require("request");
 var unirest = require("unirest");
-// const categoryRouter = require("./routes/categoryRoutes");
 
 const app = express();
 
