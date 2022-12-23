@@ -5,19 +5,19 @@ const app = express();
 
 app.use(express.json());
 
-// Handling  cors error
-// app.use((req, res, next) => {
-//   res.header("Access-Controll-Allow-Origin", "*");
-//   res.header(
-//     "Access-Controll-Allow-Headers",
-//     "Origin,X-Requsted-With,Content-Type,Accept,Authorization"
-//   );
-//   if (req.method === "OPTIONS") {
-//     res.header("Access-Control-Allow-Methods", "PUT,POST,PATCH,DELETE,GET");
-//     return res.status(200).json({});
-//   }
-//   next();
-// });
+Handling  cors error
+app.use((req, res, next) => {
+  res.header("Access-Controll-Allow-Origin", "*");
+  res.header(
+    "Access-Controll-Allow-Headers",
+    "Origin,X-Requsted-With,Content-Type,Accept,Authorization"
+  );
+  if (req.method === "OPTIONS") {
+    res.header("Access-Control-Allow-Methods", "PUT,POST,PATCH,DELETE,GET");
+    return res.status(200).json({});
+  }
+  next();
+});
 
 // var req = unirest("GET", "https://sandbox.safaricom.co.ke/oauth/v1/generate");
 
