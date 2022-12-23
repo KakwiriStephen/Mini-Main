@@ -43,6 +43,4 @@ app.use((req, res, next) => {
 //   });
 // });
 
-// app.use("/category", categoryRouter);
-
 module.exports = app;
