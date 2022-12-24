@@ -1,10 +1,11 @@
 {
-    "name": "handlingforms",
+    "name": "backend",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
-        "start": "nodemon index.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "nodemon server.js"
     },
     "author": "",
     "license": "ISC",
@@ -13,7 +14,6 @@
         "express": "^4.18.2",
         "mongoose": "^6.8.0",
         "nodemon": "^2.0.20",
-        "path": "^0.12.7",
-        "validator": "^13.7.0"
+        "path": "^0.12.7"
     }
 }
