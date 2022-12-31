@@ -5,7 +5,8 @@ const app = express();
 
 app.use(express.json());
 
-// Handling cors error
+//Handling  cors error
+
 app.use((req, res, next) => {
   res.header("Access-Controll-Allow-Origin", "*");
   res.header(
